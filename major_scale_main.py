@@ -58,6 +58,7 @@ def main():
             question_text = f"音名{start_note} (级数{start_degree},唱名{solfege[start_degree-1]})\n那级数为 {target_degree} 的音名是？"
         elif question_type == 'note_to_degree':
             # 给出级数，询问音名
+            target_note = start_note
             while target_note == start_note:
                 target_note = random.choice(selected_scale)
             target_degree = selected_scale.index(target_note) + 1
